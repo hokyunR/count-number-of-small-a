@@ -4,7 +4,8 @@ const button = document.querySelector("button");
 const input = document.querySelector("input");
 const result = document.querySelector("span");
 
-button.addEventListener("click", () => {
+button.addEventListener("click", (e) => {
+  e.preventDefault();
   const numberOfSmallA = getNumberOfSmallA(input.value);
   result.textContent = numberOfSmallA;
 });
